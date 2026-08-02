@@ -122,13 +122,13 @@ a,button{touch-action:manipulation}
 .check-list li::before{position:absolute;top:1.22rem;left:0;width:.75rem;height:.38rem;border-bottom:2px solid var(--primary);border-left:2px solid var(--primary);content:"";transform:rotate(-45deg)}
 .assessment-aside{padding:2rem;background:#eef3ed;border-radius:18px}
 .assessment-aside p:nth-child(2){color:var(--muted)}
-.implementation{display:grid;grid-template-columns:1fr .8fr;gap:clamp(3rem,9vw,8rem);margin-top:clamp(5rem,10vw,9rem);padding:clamp(2.5rem,5vw,5rem);border-radius:24px;background:#003c39}
+.implementation{display:grid;grid-template-columns:1fr .8fr;column-gap:clamp(3rem,9vw,8rem);row-gap:2rem;margin-top:clamp(5rem,10vw,9rem);padding:clamp(2.5rem,5vw,5rem);border-radius:24px;background:#003c39}
 .implementation h3{margin:0;font-size:clamp(2rem,3.5vw,3.5rem);line-height:1.12}
 .implementation>div>p{color:#c4d9d6}
 .implementation ul{margin:1.5rem 0 0;padding:0;list-style:none;color:white}
 .implementation li{padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.16)}
 .implementation li::before{margin-right:.7rem;content:"→";color:#f2c66e}
-.trust-copy{max-width:760px;margin:2rem auto 0;color:var(--muted);text-align:center;font-size:.88rem}
+.implementation-rationale{grid-column:1/-1;max-width:900px;margin:.1rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.16);color:#c4d9d6;text-align:center;font-size:clamp(.9rem,1.15vw,1.05rem);line-height:1.7}
 
 .process{background:var(--paper)}
 .steps{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
@@ -162,7 +162,8 @@ details[open] summary::after{content:"−"}
 .about-contact h3{margin-bottom:1.5rem;color:#f2c66e;font-family:"Geist","Public Sans","IBM Plex Sans Thai",sans-serif;font-size:clamp(1.45rem,2.2vw,2rem);letter-spacing:-.012em}
 .about-contact dl{margin:0}
 .about-contact dl>div{display:grid;grid-template-columns:minmax(78px,.7fr) minmax(0,1.3fr);gap:1rem;align-items:center;min-height:56px;border-top:1px solid rgba(255,255,255,.16)}
-.about-contact dt{color:#9fc3be;font-size:.74rem;font-weight:600}
+.about-contact dt{display:flex;align-items:center;gap:.55rem;color:#f2c66e;font-size:.74rem;font-weight:600}
+.contact-icon{flex:0 0 19px;width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .about-contact dd{min-width:0;margin:0;color:#eef6f4;font:600 clamp(.78rem,1vw,.9rem)/1.45 "Geist","Public Sans","IBM Plex Sans Thai",sans-serif;overflow-wrap:anywhere}
 .about-contact a{display:inline-flex;align-items:center;min-height:40px;color:inherit;text-decoration:none;transition:transform .3s var(--ease),color .3s var(--ease)}
 html[lang="th"] .about-heading h2{letter-spacing:-.01em;line-height:1.16}
@@ -237,6 +238,7 @@ html[lang="en"] .about-heading h2{font-size:clamp(1.85rem,8.6vw,2.4rem)}
 .about-story{padding:1.4rem}
 .about-story h3{margin-bottom:1.75rem}
 .about-contact{padding:1.4rem}
+.contact-icon{flex-basis:20px;width:20px;height:20px}
 .footer-grid div{display:grid;gap:.55rem}
 }
 
