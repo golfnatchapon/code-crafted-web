@@ -21,7 +21,7 @@
   "case2Sector": "Accounting services",
   "case2Title": "Monthly invoice emails",
   "case3Body": "A planning tool evaluates tasks, dependencies, available crews, and operating constraints to create a workable maintenance sequence.",
-  "case3Metric": "Over 1 million baht",
+  "case3Metric": "Over 20 million baht",
   "case3Result": "Maintenance cost savings",
   "case3Sector": "Thai energy business",
   "case3Title": "Maintenance scheduling",

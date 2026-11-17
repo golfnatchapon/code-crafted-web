@@ -2,14 +2,6 @@
 
 Static marketing site for Code Crafted.
 
-## Local preview
-
-```sh
-python3 -m http.server 8000 --directory site
-```
-
-Open `http://localhost:8000`.
-
 ## Structure
 
 - `site/` — deployable static site
