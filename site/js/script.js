@@ -149,9 +149,9 @@
   for (const button of languageButtons) {
     button.addEventListener('click', () => setLanguage(button.dataset.language));
   }
-  let initialLanguage = 'th';
-  try { initialLanguage = localStorage.getItem('code-crafted-v2-language') === 'en' ? 'en' : 'th'; }
-  catch { /* Use the default Thai content. */ }
+  let initialLanguage = 'en';
+  try { initialLanguage = localStorage.getItem('code-crafted-v2-language') === 'th' ? 'th' : 'en'; }
+  catch { /* Use English when browser storage is unavailable. */ }
   setLanguage(initialLanguage, false);
 
   const menuButton = document.querySelector('.menu-toggle');
