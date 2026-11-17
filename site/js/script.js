@@ -1,140 +1,277 @@
 (() => {
   "use strict";
 
-  const copy = {
-    en: {
-      skip: "Skip to main content", primaryNav: "Primary navigation", menu: "Open or close menu", language: "Choose language",
-      navProblems: "Problems we solve", navProof: "Selected work", navAssessment: "Free assessment", navProcess: "How it works", navFaq: "FAQ", navAbout: "Who we are",
-      heroKicker: "Improve the work before adding tools", heroTitle: "Make everyday work<br>faster, clearer, and easier to manage.", heroLead: "Start with a free <strong>AI Workflow &amp; Time-Saving Assessment</strong> to find practical ways to reduce repeated work using tools your team already has.", heroProof: "See practical outcomes", heroNote: "Available in Thai or English. No technical brief or AI knowledge required.", scroll: "Scroll to see work unfold",
-      problemsKicker: "When everyday work feels heavier than it should", problemsTitle: "The team is not the problem.<br>The fix is missing the real issue.", problemsLead: "Not every problem needs a large system. Start by understanding the work, then improve the point that helps the team most.",
-      problem1Title: "Information is scattered", problem1Body: "Customer and job information lives across LINE, email, files, and spreadsheets. The team wastes time searching while customers wait for answers.", problem2Title: "The same work happens every day", problem2Body: "Employees copy information and recreate replies, quotations, reports, and documents instead of serving customers and handling higher-value work.", problem3Title: "Meetings and follow-ups get missed", problem3Body: "What is agreed in LINE must be entered into a calendar or task list by hand, making appointments and actions easy to forget.", problem4Title: "Financial documents take too long to check", problem4Body: "Invoices, transfer slips, receipts, and tax documents need repeated matching and review. Billing slows down, payments arrive later, and errors become more likely.", problem5Title: "Useful knowledge is buried in documents", problem5Body: "The information needed to answer customers sits inside long PDFs and large file collections, so employees must search, read, and summarise it again.", problem6Title: "Everything depends on one person", problem6Body: "Important processes live in the owner’s or a key employee’s memory. Delegating becomes difficult, and growth adds more pressure.",
-      bentoKicker: "Start with real work", bentoTitle: "See what is slow<br>and what is worth doing first.", bentoBody: "We do not begin by selling one AI tool or software product. We begin with the work, team, and tools already in use.", bentoEvidenceKicker: "What we look for", bentoEvidenceTitle: "Opportunities that give<br>the team more time", bentoEvidenceBody: "Our target is to identify opportunities that could save at least", bentoEvidenceMetricUnit: "hours", bentoEvidenceMetricPeriod: "each week", bentoEvidenceMetricAria: "5 hours each week", bentoTools: "LINE · Email · Excel · Documents · PowerPoint", bentoToolsNote: "Connect what the team already uses, without adding complexity.",
-      proofKicker: "Work from real operational problems", proofTitle: "Results start with<br>finding the real problem.", proofLead: "These anonymised examples show the kind of work we deliver. They are not a promise that every business will achieve identical results.", case1Title: "AI-assisted invoice classification", case1Sector: "Thai accounting firm", case1Body: "A workflow reads invoice data and proposes debit and credit treatment for an accountant to review. The cycle fell from about seven days to one day, with the accountant retaining final approval.", case1Result: "days per cycle", case2Title: "Recurring invoice email automation", case2Sector: "Accounting services", case2Body: "A workflow prepares and sends monthly invoice emails across the client list, keeping communication consistent and reducing the risk of missed billing messages.", case2Result: "monthly processing time", case3Title: "Planned-maintenance scheduling", case3Sector: "Thai energy business", case3Body: "A planning tool evaluates tasks, dependencies, available crews, and operating constraints to create a workable maintenance sequence.", case3ResultValue: "THB 1M+", case3Result: "in cost savings",
-      assessmentKicker: "AI Workflow & Time-Saving Assessment", assessmentTitle: "Start by understanding work,<br>not by buying a system.", priceLabel: "Assessment fee", price: "Free", priceNote: "No obligation to purchase further services", assessmentIntro: "We begin with a 45-minute conversation about repeated tasks, waiting, missed follow-ups, and work employees still do by hand. Within five business days, you receive a written assessment with recommendations that account for your team, budget, and current tools.", deliverablesTitle: "What you receive", deliverable1: "A summary of the work and processes slowing the team down", deliverable2: "Three to seven practical recommendations", deliverable3: "Estimated setup effort and software cost for each option", deliverable4: "Estimated potential time savings based on the information you provide", deliverable5: "A priority map separating quick wins from later improvements", deliverable6: "A 30-minute meeting to explain the solution", recommendKicker: "The answer does not always need AI", recommendLead: "The answer may be automation, removing an unnecessary step, or making better use of software already in place. Technology is a tool, not the goal.", implementationKicker: "If you find something worth fixing", implementationTitle: "We can build it<br>with your team.", implementationBody: "Before work begins, we agree on the problem, expected result, scope, tools, information, testing method, project fee, and third-party software costs.", implementation1: "Testing with realistic scenarios", implementation2: "Team instructions and training", implementation3: "Handover and post-launch review", assessmentRationale: "The assessment helps both sides confirm whether there is a worthwhile improvement before any paid work begins. If you later want implementation help, Code Crafted can provide a separate quote. You keep the assessment whether you continue or not. Because every assessment includes a written report and a results meeting, we accept only a limited number of free assessments each month.",
-      processKicker: "How it works", processTitle: "Understand the work first.<br>Then choose what is worth doing.", step1Title: "Walk us through the current work", step1Body: "Spend 45 minutes showing where the process starts, where it slows down, and what you have already tried.", step2Title: "Receive a written assessment", step2Body: "Within five business days, receive recommendations with costs, effort, priorities, and potential time savings.", step3Title: "Review the findings together", step3Body: "Meet for 30 minutes, ask questions, and identify a useful first step for the business.", step4Title: "Choose what happens next", step4Body: "Implement it yourself, use another provider, request a quote from us, or take no action.",
-      faqKicker: "Frequently asked questions", faqTitle: "Know the details.<br>Then decide.", faqLead: "If you are unsure whether the assessment fits, tell us what is slowing the team down. We will tell you honestly whether it is likely to help.", faq1Q: "Is the assessment really free?", faq1A: "Yes. There is no assessment fee and no obligation to purchase another service.", faq2Q: "Do I need to understand AI?", faq2A: "No. We discuss the business in plain language and explain what each option does, what it may cost, and what the team would need to change.", faq3Q: "What do I need to prepare?", faq3A: "Be ready to describe a normal working day, repeated tasks, delays, and the tools your team uses. No presentation or technical brief is needed.", faq4Q: "Do I need to send sensitive information?", faq4A: "Passwords and client documents are not required for the free assessment by default. We can begin with your explanation and non-sensitive examples.", faq5Q: "Will recommendations only involve AI?", faq5A: "Not necessarily. We may recommend AI, automation, simpler software, or a process change.",
-      aboutTitleLead: "Understand the work", aboutTitleEnd: "before choosing technology.", aboutName: "About Code Crafted", aboutBody1: "Code Crafted brings more than seven years of experience applying AI, automation, data analysis, and optimization to operational problems across accounting, energy, retail, and financial services.", aboutBody2: "We begin by understanding how the work is done, then simplify the process and recommend the smallest useful improvement. The focus is practical advice, realistic controls, and technology that supports the team instead of adding complexity.", aboutSector1: "Accounting", aboutSector2: "Energy", aboutSector3: "Retail", aboutSector4: "Financial services", aboutSectorsLabel: "Sectors where Code Crafted has experience", aboutCapabilitiesLabel: "AI, automation, data analysis, and optimization", aboutExperience: "years of experience solving operational problems", aboutContactTitle: "Contact Code Crafted", locationLabel: "Location", locationAddress: "88/31, 131 Pracha Uthit 107, Thungkru, Bangkok 10140", phoneLabel: "Telephone", emailLabel: "Email",
-      footerStatement: "Understand the work, choose only the technology needed, and build something the team can genuinely use.", footerTrustKicker: "Business identity", footerTrustTitle: "Code Crafted", footerRegistrationLabel: "Juristic Person Registration No.", footerRegistrationNumber: "[Replace with verified number]", dbdName: "Department of Business Development", dbdMinistry: "Ministry of Commerce"
+  const english = {
+  "aboutBody1": "More than seven years of experience applying AI, automation, data analysis, and optimization to operational problems across accounting, energy, retail, and financial services.",
+  "approachBody": "We look for practical improvements that could save at least five hours a week, without adding unnecessary complexity.",
+  "approachTitle": "Start with the work you already do.",
+  "artCaption": "Connect the work. Give your team time back.",
+  "assessmentIntro": "Tell us how the team works today. We’ll identify repeated tasks, delays, and missed handovers, then recommend improvements that fit your team, budget, and existing tools.",
+  "assessmentKicker": "AI Workflow & Time-Saving Assessment",
+  "assessmentPromise": "Free, with no obligation to buy a system or continue with us.",
+  "assessmentTitle": "A clearer next step.<br>Before you invest.",
+  "case1Body": "A workflow reads invoice data and proposes debit and credit treatment for an accountant to review, reducing time spent classifying documents while keeping final approval with the accountant.",
+  "case1Metric": "7 days → 1 day",
+  "case1Result": "Invoice processing time per cycle",
+  "case1Sector": "Thai accounting firm",
+  "case1Title": "Invoice classification",
+  "case2Body": "A workflow prepares and sends monthly invoice emails across the client list, keeping communication consistent and reducing the risk of missed billing messages.",
+  "case2Metric": "3 hours → less than 5 minutes",
+  "case2Result": "Time spent sending invoices each month",
+  "case2Sector": "Accounting services",
+  "case2Title": "Monthly invoice emails",
+  "case3Body": "A planning tool evaluates tasks, dependencies, available crews, and operating constraints to create a workable maintenance sequence.",
+  "case3Metric": "Over 1 million baht",
+  "case3Result": "Maintenance cost savings",
+  "case3Sector": "Thai energy business",
+  "case3Title": "Maintenance scheduling",
+  "contactEmail": "Send us an email",
+  "contactLabel": "Let’s start with a conversation",
+  "contactLead": "Tell us about one task that keeps coming back. We’ll help you see whether a free workflow assessment is a useful next step.",
+  "contactLine": "Talk to us on LINE",
+  "contactReassurance": "No presentation needed. Just tell us how the work happens.",
+  "contactTitle": "What would you like<br>your team to spend less time on?",
+  "deliverable1": "A clear picture of the processes slowing the team down",
+  "deliverable2": "Three to seven practical recommendations",
+  "deliverable3": "Estimated effort and software or AI costs for each option",
+  "deliverable4": "Potential time savings based on the information you share",
+  "deliverable5": "Quick wins and a priority plan for what comes next",
+  "deliverable6": "A 30-minute conversation to walk through the findings",
+  "deliverablesTitle": "What you receive",
+  "emailLabel": "Email",
+  "fact1Label": "to understand your workflow",
+  "fact1Value": "45 minutes",
+  "fact2Label": "to receive your written report",
+  "fact2Value": "5 business days",
+  "fact3Label": "to review the findings together",
+  "fact3Value": "30 minutes",
+  "factsIntro": "A clear place to start. No obligation.",
+  "faq1A": "Yes. There is no assessment fee and no obligation to purchase another service.",
+  "faq1Q": "Is the assessment really free?",
+  "faq2A": "No. We discuss the business in plain language and explain what each option does, what it may cost, and what the team would need to change.",
+  "faq2Q": "Do I need to understand AI?",
+  "faq3A": "Be ready to describe a normal working day, repeated tasks, delays, and the tools your team uses. No presentation or technical brief is needed.",
+  "faq3Q": "What do I need to prepare?",
+  "faq4A": "Passwords and client documents are not required for the free assessment by default. We can begin with your explanation and non-sensitive examples.",
+  "faq4Q": "Do I need to send sensitive information?",
+  "faq5A": "Not necessarily. We may recommend AI, automation, simpler software, or a process change.",
+  "faq5Q": "Will recommendations only involve AI?",
+  "faqKicker": "Frequently asked questions",
+  "faqLead": "Still unsure whether this is a good fit? Tell us what is taking up your team’s time.",
+  "faqTitle": "A few things<br>you may be wondering.",
+  "footerStatement": "Thoughtful technology. Practical improvements.",
+  "heroLead": "Find practical ways to save your team time. Start with a free AI Workflow & Time-Saving Assessment, built around the tools you already use.",
+  "heroNote": "In Thai or English. No technical brief or AI knowledge needed.",
+  "heroProof": "Explore our work",
+  "heroTitle": "Less repeated work.<br>More room to move.",
+  "implementationBody": "We can quote implementation separately. Before starting, we agree the scope, outcomes, testing, fees, and software costs. Delivery includes realistic testing, team training, a handover, and a post-launch review.",
+  "implementationTitle": "Need help putting it into practice?",
+  "language": "Choose language",
+  "locationAddress": "88/31, Soi Pracha Uthit 131, Thung Khru, Bangkok 10140",
+  "locationLabel": "Location",
+  "menu": "Open or close menu",
+  "navAbout": "About us",
+  "navAssessment": "Free assessment",
+  "navContact": "Let’s talk",
+  "navFaq": "FAQ",
+  "navProcess": "How it works",
+  "navProof": "Selected work",
+  "phoneLabel": "Telephone",
+  "price": "Free",
+  "primaryNav": "Primary navigation",
+  "problem1Body": "Customer details are scattered across LINE, email, files, and spreadsheets. Finding an answer takes longer than it should.",
+  "problem1Title": "Information is scattered",
+  "problem2Body": "The team copies data and recreates replies, quotes, and reports, leaving less time for customers.",
+  "problem2Title": "The same work happens every day",
+  "problem3Body": "Plans made in LINE still need to be entered into a calendar by hand. It is easy to miss a step.",
+  "problem3Title": "Appointments slip through the gaps",
+  "problem4Body": "Matching invoices, payment slips, and receipts takes time and leaves room for mistakes.",
+  "problem4Title": "Documents take too long to check",
+  "problem5Body": "Answers are buried in long PDFs and folders. The team searches and summarises the same material again.",
+  "problem5Title": "Useful knowledge is buried in documents",
+  "problem6Body": "Key steps live in someone’s memory. Delegating is difficult, and growth adds pressure.",
+  "problem6Title": "Everything depends on one person",
+  "problemsKicker": "A familiar working day?",
+  "problemsLead": "When small tasks keep adding up, another tool is not always the answer. Let’s find where the work gets stuck.",
+  "problemsTitle": "Good teams deserve<br>better ways of working.",
+  "processKicker": "How it works",
+  "processLead": "A clear process, with room to ask questions and decide what works for your business.",
+  "processTitle": "From conversation<br>to a practical plan.",
+  "proofIntro": "From accounting workflows to maintenance planning, each solution begins with a specific operational problem.",
+  "proofKicker": "Selected work",
+  "proofTitle": "Real work.<br>Practical results.",
+  "reportSubtitle": "A written report you can keep and use",
+  "requestAssessment": "Request a free assessment",
+  "skip": "Skip to main content",
+  "step1Body": "A 45-minute conversation about your current process, tools, and points of friction.",
+  "step1Title": "Show us the work",
+  "step2Body": "Within five business days, receive recommendations with costs, effort, and potential time savings.",
+  "step2Title": "Get a written plan",
+  "step3Body": "Spend 30 minutes going through the findings and choosing a useful first step.",
+  "step3Title": "Review it together",
+  "step4Body": "Do it yourself, use another provider, ask us for a quote, or take no action.",
+  "step4Title": "Choose what’s next"
+};
+  const title = document.title;
+  const description = document.querySelector('meta[name="description"]');
+  const thaiDescription = description.content;
+  const languageButtons = [...document.querySelectorAll('[data-language]')];
+  const translations = [
+    ['data-i18n', 'textContent'],
+    ['data-i18n-html', 'innerHTML'],
+    ['data-i18n-aria', 'aria-label']
+  ].flatMap(([attribute, property]) => [...document.querySelectorAll(`[${attribute}]`)].map(element => ({
+    element, key: element.getAttribute(attribute), property,
+    thai: property === 'aria-label' ? element.getAttribute(property) : element[property]
+  })));
+
+  function setLanguage(language, persist = true) {
+    const isEnglish = language === 'en';
+    document.documentElement.lang = isEnglish ? 'en' : 'th';
+    for (const { element, key, property, thai } of translations) {
+      const value = isEnglish ? english[key] : thai;
+      if (property === 'aria-label') element.setAttribute(property, value);
+      else element[property] = value;
     }
-  };
-
-  const thaiTitle = document.title;
-  const englishTitle = "Code Crafted | Less repeated work, smoother operations";
-  const header = document.querySelector(".site-header");
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navPanel = document.querySelector(".nav-panel");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let language = localStorage.getItem("code-crafted-v2-language") === "en" ? "en" : "th";
-  const thaiCopy = { text: {}, html: {}, placeholder: {}, aria: {} };
-  document.querySelectorAll("[data-i18n]").forEach((element) => { thaiCopy.text[element.dataset.i18n] = element.textContent; });
-  document.querySelectorAll("[data-i18n-html]").forEach((element) => { thaiCopy.html[element.dataset.i18nHtml] = element.innerHTML; });
-  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => { thaiCopy.placeholder[element.dataset.i18nPlaceholder] = element.placeholder; });
-  document.querySelectorAll("[data-i18n-aria]").forEach((element) => { thaiCopy.aria[element.dataset.i18nAria] = element.getAttribute("aria-label"); });
-
-  const setLanguage = (next, persist = true) => {
-    language = next === "en" ? "en" : "th";
-    document.documentElement.lang = language;
-    document.title = language === "en" ? englishTitle : thaiTitle;
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const value = language === "en" ? copy.en[element.dataset.i18n] : thaiCopy.text[element.dataset.i18n];
-      if (value) element.textContent = value;
-    });
-    document.querySelectorAll("[data-i18n-html]").forEach((element) => {
-      const value = language === "en" ? copy.en[element.dataset.i18nHtml] : thaiCopy.html[element.dataset.i18nHtml];
-      if (value) element.innerHTML = value;
-    });
-    document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
-      const value = language === "en" ? copy.en[element.dataset.i18nPlaceholder] : thaiCopy.placeholder[element.dataset.i18nPlaceholder];
-      if (value) element.placeholder = value;
-    });
-    document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
-      const value = language === "en" ? copy.en[element.dataset.i18nAria] : thaiCopy.aria[element.dataset.i18nAria];
-      if (value) element.setAttribute("aria-label", value);
-    });
-    document.querySelectorAll("[data-language]").forEach((button) => {
-      const active = button.dataset.language === language;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-    if (persist) localStorage.setItem("code-crafted-v2-language", language);
-    if (window.ScrollTrigger) window.requestAnimationFrame(() => window.ScrollTrigger.refresh());
-  };
-
-  setLanguage(language, false);
-  document.querySelectorAll("[data-language]").forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.language)));
-
-  const closeMenu = () => {
-    navPanel.classList.remove("is-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open");
-  };
-  menuToggle.addEventListener("click", () => {
-    const open = !navPanel.classList.contains("is-open");
-    navPanel.classList.toggle("is-open", open);
-    menuToggle.setAttribute("aria-expanded", String(open));
-    document.body.classList.toggle("menu-open", open);
-  });
-  navPanel.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
-  const sectionLinks = [...document.querySelectorAll(".nav-links a[href^='#']")];
-  const linkedSections = sectionLinks.map((link) => ({ link, section: document.querySelector(link.getAttribute("href")) })).filter(({ section }) => section);
-  const setActiveSection = (id) => sectionLinks.forEach((link) => {
-    if (link.getAttribute("href") === `#${id}`) link.setAttribute("aria-current", "page");
-    else link.removeAttribute("aria-current");
-  });
-  const sectionObserver = new IntersectionObserver((entries) => {
-    const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-    if (visible[0]) setActiveSection(visible[0].target.id);
-  }, { rootMargin: "-30% 0px -55% 0px", threshold: [0.05, 0.25, 0.5] });
-  linkedSections.forEach(({ section }) => sectionObserver.observe(section));
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
-  window.addEventListener("scroll", () => header.classList.toggle("is-scrolled", window.scrollY > 18), { passive: true });
-
-  const cases = [...document.querySelectorAll(".case")];
-  cases.forEach((caseItem) => {
-    caseItem.querySelector(".case-toggle").addEventListener("click", () => {
-      const wasOpen = caseItem.classList.contains("is-open");
-      cases.forEach((item) => {
-        item.classList.remove("is-open");
-        item.querySelector(".case-toggle").setAttribute("aria-expanded", "false");
-        item.querySelector("use").setAttribute("href", "#plus");
-      });
-      if (!wasOpen) {
-        caseItem.classList.add("is-open");
-        caseItem.querySelector(".case-toggle").setAttribute("aria-expanded", "true");
-        caseItem.querySelector("use").setAttribute("href", "#minus");
-      }
-    });
-  });
-
-  const paperScene = document.querySelector("[data-paper-scene]");
-  const paperFrames = [...document.querySelectorAll(".paper-frame")].map((element) => ({ element, point: Number(element.dataset.frame) }));
-  const setPaper = () => {
-    if (!paperScene || reduceMotion.matches) return;
-    const rect = paperScene.getBoundingClientRect();
-    const range = Math.max(1, paperScene.offsetHeight - window.innerHeight);
-    const progress = Math.max(0, Math.min(1, -rect.top / range));
-    let lower = paperFrames[0];
-    let upper = paperFrames[paperFrames.length - 1];
-    for (let index = 1; index < paperFrames.length; index += 1) {
-      if (progress <= paperFrames[index].point) { lower = paperFrames[index - 1]; upper = paperFrames[index]; break; }
+    document.title = isEnglish ? 'Code Crafted | Free workflow assessment' : title;
+    description.content = isEnglish
+      ? 'Reduce repeated work with practical AI and automation. Start with a free workflow assessment tailored to your team and the tools you already use.'
+      : thaiDescription;
+    for (const button of languageButtons) {
+      button.setAttribute('aria-pressed', String(button.dataset.language === document.documentElement.lang));
     }
-    const blend = Math.max(0, Math.min(1, (progress - lower.point) / (upper.point - lower.point || 1)));
-    paperFrames.forEach(({ element }) => { element.style.opacity = "0"; element.classList.remove("is-current"); });
-    lower.element.style.opacity = String(1 - blend);
-    upper.element.style.opacity = String(blend);
-  };
-  window.addEventListener("scroll", setPaper, { passive: true });
-  setPaper();
-
-  if (!reduceMotion.matches && window.gsap && window.ScrollTrigger && window.innerWidth > 900) {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(".proof-intro", { y: -42, ease: "none", scrollTrigger: { trigger: ".proof", start: "top bottom", end: "bottom top", scrub: true } });
-    const copyBlock = document.querySelector("[data-scrub-copy] p");
-    const text = copyBlock.textContent.trim().split(/\s+/);
-    copyBlock.innerHTML = text.map((word) => `<span>${word}</span>`).join(" ");
-    gsap.fromTo("[data-scrub-copy] span", { opacity: .18 }, { opacity: 1, stagger: .035, ease: "none", scrollTrigger: { trigger: "[data-scrub-copy]", start: "top 82%", end: "bottom 48%", scrub: true } });
-    gsap.fromTo(".implementation-rationale", { y: 24, opacity: .18 }, { y: 0, opacity: 1, ease: "power2.out", scrollTrigger: { trigger: ".implementation", start: "top 78%", end: "bottom 62%", scrub: true } });
-    gsap.fromTo(".bento", { y: 24, opacity: .2 }, { y: 0, opacity: 1, stagger: .12, scrollTrigger: { trigger: ".bento-grid", start: "top 82%", toggleActions: "play none none reverse" } });
-    ScrollTrigger.create({ trigger: ".about-grid", start: "top 18%", end: "bottom 84%", pin: "[data-about-story]", pinSpacing: false });
+    if (persist) {
+      try { localStorage.setItem('code-crafted-v2-language', document.documentElement.lang); }
+      catch { /* Language switching still works when browser storage is unavailable. */ }
+    }
   }
+
+  for (const button of languageButtons) {
+    button.addEventListener('click', () => setLanguage(button.dataset.language));
+  }
+  let initialLanguage = 'th';
+  try { initialLanguage = localStorage.getItem('code-crafted-v2-language') === 'en' ? 'en' : 'th'; }
+  catch { /* Use the default Thai content. */ }
+  setLanguage(initialLanguage, false);
+
+  const menuButton = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.nav-panel');
+  const header = document.querySelector('.site-header');
+  const desktop = window.matchMedia('(min-width: 901px)');
+  let previousScrollY = window.scrollY;
+  let directionStartY = previousScrollY;
+  let scrollDirection = 0;
+
+  function updateHeaderVisibility() {
+    // Clamp elastic overscroll so bouncing at either edge cannot reverse direction.
+    const scrollY = Math.max(0, Math.min(window.scrollY, document.documentElement.scrollHeight - window.innerHeight));
+    const direction = Math.sign(scrollY - previousScrollY);
+    if (scrollY <= 0 || menu.classList.contains('is-open') || header.contains(document.activeElement)) {
+      header.classList.remove('is-hidden');
+      directionStartY = scrollY;
+      scrollDirection = 0;
+    } else if (direction) {
+      if (direction !== scrollDirection) directionStartY = previousScrollY;
+      scrollDirection = direction;
+      if (Math.abs(scrollY - directionStartY) >= 8) {
+        header.classList.toggle('is-hidden', direction < 0);
+      }
+    }
+    previousScrollY = scrollY;
+  }
+
+  header.addEventListener('focusin', () => {
+    header.classList.remove('is-hidden');
+    directionStartY = previousScrollY = window.scrollY;
+    scrollDirection = 0;
+  });
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+  }
+  menuButton.addEventListener('click', () => {
+    const open = menu.classList.toggle('is-open');
+    menuButton.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.classList.contains('is-open')) {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!header.contains(event.target)) closeMenu();
+  });
+  desktop.addEventListener('change', closeMenu);
+  document.documentElement.classList.add('js');
+
+  const navLinks = menu.querySelector('.nav-links');
+  const sectionLinks = [...navLinks.querySelectorAll('a')];
+  const linkSections = sectionLinks.map(link => document.querySelector(link.hash).closest('section'));
+  const sections = [...document.querySelectorAll('main > section[id]')];
+  const highlight = document.createElement('span');
+  highlight.className = 'nav-highlight';
+  highlight.setAttribute('aria-hidden', 'true');
+  navLinks.prepend(highlight);
+  let currentLink = null;
+  let hoveredLink = null;
+  let navFrame = 0;
+
+  function renderHighlight() {
+    const focusedLink = sectionLinks.find(link => link.matches(':focus-visible'));
+    const target = hoveredLink || focusedLink || currentLink;
+    const visible = target && target.getClientRects().length > 0;
+    navLinks.classList.toggle('has-highlight', Boolean(visible));
+    if (!visible) return;
+    navLinks.style.setProperty('--highlight-x', `${target.offsetLeft}px`);
+    navLinks.style.setProperty('--highlight-y', `${target.offsetTop}px`);
+    navLinks.style.setProperty('--highlight-width', `${target.offsetWidth}px`);
+    navLinks.style.setProperty('--highlight-height', `${target.offsetHeight}px`);
+  }
+
+  function updateNavigation() {
+    navFrame = 0;
+    updateHeaderVisibility();
+    // Keep the reading position marked while the expanded mobile menu shifts the page.
+    if (menu.classList.contains('is-open')) {
+      renderHighlight();
+      return;
+    }
+    const sectionLine = header.getBoundingClientRect().height + 24;
+    const atPageEnd = window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    const section = atPageEnd ? sections.at(-1) : sections.filter(item => item.getBoundingClientRect().top <= sectionLine).at(-1);
+    currentLink = sectionLinks[linkSections.indexOf(section)] || null;
+    for (const link of sectionLinks) {
+      if (link === currentLink) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+    renderHighlight();
+  }
+
+  function scheduleNavigation() {
+    if (!navFrame) navFrame = requestAnimationFrame(updateNavigation);
+  }
+
+  for (const link of sectionLinks) {
+    link.addEventListener('pointerenter', event => {
+      if (event.pointerType === 'touch') return;
+      hoveredLink = link;
+      renderHighlight();
+    });
+    link.addEventListener('focus', renderHighlight);
+  }
+  navLinks.addEventListener('pointerleave', () => {
+    hoveredLink = null;
+    renderHighlight();
+  });
+  navLinks.addEventListener('focusout', scheduleNavigation);
+  window.addEventListener('scroll', scheduleNavigation, { passive: true });
+  window.addEventListener('resize', scheduleNavigation);
+  // Language changes, local font loading, and menu expansion can all move the links.
+  const navResize = new ResizeObserver(scheduleNavigation);
+  navResize.observe(navLinks);
+  sectionLinks.forEach(link => navResize.observe(link));
+  document.fonts.ready.then(scheduleNavigation);
+  updateNavigation();
 })();

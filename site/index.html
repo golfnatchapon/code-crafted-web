@@ -3,133 +3,145 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Code Crafted ช่วยธุรกิจบริการในไทยลดงานซ้ำและจัดการงานได้ชัดขึ้น เริ่มจากการประเมิน Workflow ฟรี">
+  <meta name="description" content="Code Crafted ช่วยธุรกิจลดงานซ้ำด้วย AI และ Automation เริ่มจากการประเมิน Workflow ฟรี พร้อมคำแนะนำที่เหมาะกับทีมและเครื่องมือที่ใช้อยู่">
   <meta name="theme-color" content="#004643">
-  <title>Code Crafted | ลดงานซ้ำ ให้ธุรกิจเดินหน้าได้คล่องขึ้น</title>
+  <title>Code Crafted | ลดงานซ้ำ เริ่มจากประเมิน Workflow ฟรี</title>
   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="assets/fonts/sukhumvit-set.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=nav-scroll-1">
+  <script src="js/script.js?v=nav-scroll-1" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main-content" data-i18n="skip">ข้ามไปยังเนื้อหาหลัก</a>
-  <svg class="sprite" aria-hidden="true">
-    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<body id="top">
+  <a class="skip-link" href="#main-content"><span data-i18n="skip">ข้ามไปยังเนื้อหาหลัก</span></a>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
     <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
-    <symbol id="mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.991 5.727a2 2 0 0 1-2.018 0L2 7"/></symbol>
-    <symbol id="map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 9.193-7.399 10.484a1 1 0 0 1-1.202 0C9.539 19.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
-    <symbol id="phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-    <symbol id="message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
-  </svg>
-
-  <header class="site-header" id="site-header">
-    <nav class="nav-shell" aria-label="เมนูหลัก" data-i18n-aria="primaryNav">
-      <a class="brand" href="#top" aria-label="Code Crafted home"><img src="assets/brand/code-crafted-lockup.svg" alt="Code Crafted"></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="เปิดหรือปิดเมนู" data-i18n-aria="menu"><span></span><span></span></button>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="files" viewBox="0 0 24 24"><rect x="8" y="3" width="12" height="15" rx="2"/><path d="M4 7v12a2 2 0 0 0 2 2h10M12 7h4m-4 4h4"/></symbol>
+    <symbol id="repeat" viewBox="0 0 24 24"><path d="m16 3 4 4-4 4M4 11V9a2 2 0 0 1 2-2h14M8 21l-4-4 4-4m12 0v2a2 2 0 0 1-2 2H4"/></symbol>
+    <symbol id="calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18m-13 5 2 2 5-4"/></symbol>
+    <symbol id="document" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm0 0v6h6M8 13h8m-8 4h5"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 5 5m-14-11h7m-7 3h4"/></symbol>
+    <symbol id="people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></symbol>
+    <symbol id="tool-line" viewBox="0 0 24 24"><path d="M21 10.5c0 4.1-4 7.5-9 7.5h-1l-5 3 1-4.3C4.6 15.3 3 13 3 10.5 3 6.4 7 3 12 3s9 3.4 9 7.5Z"/><path d="M8 10.5h.01m4 0h.01m4 0h.01" stroke-width="2.5"/></symbol>
+    <symbol id="tool-email" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="tool-excel" viewBox="0 0 24 24"><rect x="9" y="3" width="12" height="18" rx="1.5"/><path d="M15 3v18m-6-12h12M9 15h12"/><rect x="2" y="7" width="12" height="12" rx="1" fill="var(--canvas)"/><path d="m6 10 4 6m0-6-4 6"/></symbol>
+    <symbol id="tool-word" viewBox="0 0 24 24"><rect x="9" y="3" width="12" height="18" rx="1.5"/><path d="M14 8h4m-4 4h4m-4 4h4"/><rect x="2" y="7" width="12" height="12" rx="1" fill="var(--canvas)"/><path d="m4.5 10 1.5 6 2-4 2 4 1.5-6"/></symbol>
+    <symbol id="tool-pdf" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm0 0v6h6"/><path d="M8 17c2-2 4-7 3-7-1.5 0 0 5 3 6s4-1 2-1-7 1-8 3-2 0 0-1Z"/></symbol>
+    <symbol id="tool-invoice" viewBox="0 0 24 24"><path d="M5 3h14v19l-3-2-4 2-4-2-3 2Zm4 5h6m-6 4h6m-6 4h2m3 0h1"/></symbol>
+  </defs></svg>
+  <header class="site-header">
+    <nav class="nav-shell container" aria-label="เมนูหลัก" data-i18n-aria="primaryNav">
+      <a class="brand" href="#top" aria-label="Code Crafted"><img src="assets/brand/favicon.svg" width="29" height="32" alt=""><span class="brand-name">Code Crafted</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="เปิดหรือปิดเมนู" data-i18n-aria="menu"><svg class="icon" aria-hidden="true"><use href="#menu"></use></svg></button>
       <div class="nav-panel" id="main-nav">
-        <div class="nav-links">
-          <a href="#problems" data-i18n="navProblems">ปัญหาที่ช่วยแก้</a>
-          <a href="#proof" data-i18n="navProof">ผลงานจริง</a>
-          <a href="#assessment" data-i18n="navAssessment">บริการประเมิน</a>
-          <a href="#process" data-i18n="navProcess">ขั้นตอน</a>
-          <a href="#faq" data-i18n="navFaq">FAQ</a>
-          <a href="#about" data-i18n="navAbout">เราเป็นใคร</a>
-        </div>
+        <div class="nav-links"><a href="#proof"><span data-i18n="navProof">ผลงานจริง</span></a><a href="#assessment"><span data-i18n="navAssessment">บริการประเมิน</span></a><a href="#process"><span data-i18n="navProcess">ขั้นตอน</span></a><a href="#faq"><span data-i18n="navFaq">คำถามที่พบบ่อย</span></a><a href="#about"><span data-i18n="navAbout">เราเป็นใคร</span></a></div>
         <div class="nav-actions">
-          <div class="language-switcher" role="group" aria-label="เลือกภาษา" data-i18n-aria="language"><button class="language-option is-active" type="button" data-language="th" aria-pressed="true">TH</button><button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button></div>
+          <div class="languages" role="group" aria-label="เลือกภาษา" data-i18n-aria="language"><button class="language-option" type="button" data-language="th" aria-pressed="true" lang="th">TH</button><button class="language-option" type="button" data-language="en" aria-pressed="false" lang="en">EN</button></div>
+          <a class="button button-small" href="#contact"><span data-i18n="navContact">เริ่มพูดคุย</span><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
         </div>
       </div>
     </nav>
   </header>
-
-  <main class="site-main" id="main-content">
-    <section class="hero" id="top" data-paper-scene aria-labelledby="hero-title">
-      <div class="paper-stage" aria-hidden="true">
-        <img class="paper-frame is-current" data-frame="0" src="assets/papers/paper-00.webp" alt="">
-        <img class="paper-frame" data-frame=".5" src="assets/papers/paper-40.webp" alt="">
-        <img class="paper-frame" data-frame="1" src="assets/papers/paper-100.webp" alt="">
-      </div>
-      <div class="hero-wash"></div>
-      <div class="hero-inner page-width">
-        <p class="kicker" data-i18n="heroKicker">ปรับงานให้คล่อง ก่อนเพิ่มเครื่องมือ</p>
-        <h1 id="hero-title" data-i18n-html="heroTitle">ทำให้งานประจำวัน<br>เร็วขึ้น ชัดขึ้น และง่ายขึ้น</h1>
-        <p class="hero-lead" data-i18n-html="heroLead">เริ่มจากการประเมิน <strong>AI Workflow &amp; Time-Saving ฟรี</strong> เพื่อหาวิธีลดงานซ้ำด้วยเครื่องมือที่ทีมคุณมีอยู่แล้ว</p>
-        <div class="hero-actions"><a class="text-button" href="#proof"><span data-i18n="heroProof">ดูผลลัพธ์จากงานจริง</span><svg class="icon"><use href="#arrow"></use></svg></a></div>
-        <p class="hero-note" data-i18n="heroNote">พูดคุยได้ทั้งไทยและอังกฤษ ไม่ต้องเตรียม Technical brief หรือเข้าใจ AI</p>
-      </div>
-      <p class="scroll-cue" aria-hidden="true"><span></span><span data-i18n="scroll">เลื่อนลง</span></p>
-    </section>
-
-    <section class="chapter problems" id="problems" aria-labelledby="problems-title">
-      <div class="page-width">
-        <div class="chapter-head split-head"><div><p class="kicker" data-i18n="problemsKicker">เมื่อการทำงานเริ่มหนักเกินจำเป็น</p><h2 id="problems-title" data-i18n-html="problemsTitle">ปัญหาไม่ได้อยู่ที่ทีม<br>แต่อยู่ที่การแก้ไขยังไม่ตรงจุด</h2></div><p data-i18n="problemsLead">ปัญหาเหล่านี้ไม่จำเป็นต้องแก้ด้วยระบบใหญ่เสมอไป เริ่มจากเข้าใจงาน แล้วเลือกแก้จุดที่ช่วยทีมได้มากที่สุดก่อน</p></div>
-        <div class="problem-list">
-          <article><span>01</span><h3 data-i18n="problem1Title">ข้อมูลกระจายหลายที่</h3><p data-i18n="problem1Body">ข้อมูลลูกค้าและงานอยู่ใน LINE อีเมล ไฟล์ และ Spreadsheet จนทีมเสียเวลาค้นหา และลูกค้าต้องรอคำตอบนานขึ้น</p></article>
-          <article><span>02</span><h3 data-i18n="problem2Title">ทำเรื่องเดิมซ้ำทุกวัน</h3><p data-i18n="problem2Body">ทีมคัดลอกข้อมูล สร้างคำตอบ ใบเสนอราคา รายงาน หรือเอกสารแบบเดิมซ้ำ ๆ แทนที่จะได้ดูแลลูกค้าและงานที่สำคัญกว่า</p></article>
-          <article><span>03</span><h3 data-i18n="problem3Title">นัดหมาย</h3><p data-i18n="problem3Body">นัดหมายประชุมกันใน LINE แต่ต้องนำไปใส่ใน Google Calendar เอง  ทำให้มีโอกาสลืมและพลาดนัด</p></article>
-          <article><span>04</span><h3 data-i18n="problem4Title">ตรวจสอบเอกสารกินเวลานาน</h3><p data-i18n="problem4Body">ใช้คนในการตรวจสอบความถูกต้องของใบแจ้งหนี้ สลิป ใบเสร็จ เสียเวลาและเสี่ยงผิดพลาด</p></article>
-          <article><span>05</span><h3 data-i18n="problem5Title">ความรู้สำคัญซ่อนอยู่ในเอกสาร</h3><p data-i18n="problem5Body">ข้อมูลที่ต้องใช้ตอบลูกค้าอยู่ใน PDF ยาว ๆ หรือไฟล์จำนวนมาก ทีมจึงเสียเวลาอ่าน ค้น และสรุปใหม่ทุกครั้ง</p></article>
-          <article><span>06</span><h3 data-i18n="problem6Title">ทุกอย่างขึ้นอยู่กับคนเดียว</h3><p data-i18n="problem6Body">ขั้นตอนสำคัญอยู่ในความจำของเจ้าของหรือพนักงานบางคน ทำให้มอบหมายงานยาก และธุรกิจโตโดยไม่เพิ่มภาระได้ยาก</p></article>
-        </div>
-        <div class="bento-grid" aria-label="สิ่งที่การประเมินช่วยให้เห็น">
-          <article class="bento bento-large"><p class="kicker" data-i18n="bentoKicker">เริ่มจากงานจริง</p><h3 data-i18n-html="bentoTitle">เห็นทั้งงานที่ช้า<br>และทางเลือกที่ควรทำก่อน</h3><p data-i18n="bentoBody">ไม่เริ่มจากการขาย AI หรือ Software ตัวใดตัวหนึ่ง แต่เริ่มจากงาน ทีม และเครื่องมือที่ใช้อยู่</p></article>
-          <article class="bento bento-evidence"><div class="bento-evidence-main"><p class="kicker kicker-light" data-i18n="bentoEvidenceKicker">จุดที่เรามองหา</p><h3 data-i18n-html="bentoEvidenceTitle">โอกาสที่ช่วยให้ทีม<br>มีเวลาเพิ่มขึ้น</h3><p class="bento-evidence-body" data-i18n="bentoEvidenceBody">เป้าหมายคือมองหาโอกาสที่อาจช่วยประหยัดเวลาได้อย่างน้อย</p><div class="bento-time-proof" data-i18n-aria="bentoEvidenceMetricAria" aria-label="5 ชั่วโมงต่อสัปดาห์"><strong>5</strong><span><span data-i18n="bentoEvidenceMetricUnit">ชั่วโมง</span><small data-i18n="bentoEvidenceMetricPeriod">ต่อสัปดาห์</small></span></div></div><div class="bento-evidence-tools"><p data-i18n="bentoTools">LINE · อีเมล · Excel · เอกสาร · PowerPoint</p><span data-i18n="bentoToolsNote">เชื่อมสิ่งที่ทีมใช้อยู่ ไม่เพิ่มความซับซ้อน</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter proof" id="proof" aria-labelledby="proof-title">
-      <div class="page-width proof-layout">
-        <div class="proof-intro"><p class="kicker kicker-light" data-i18n="proofKicker">ผลงานจากการแก้งานจริง</p><h2 id="proof-title" data-i18n-html="proofTitle">ผลลัพธ์เริ่มจาก<br>การหาปัญหาให้เจอ</h2><p data-i18n="proofLead">ตัวอย่างต่อไปนี้ไม่เปิดเผยชื่อลูกค้า และไม่ได้เป็นการรับประกันว่าทุกธุรกิจจะได้ผลลัพธ์เท่ากัน</p></div>
-        <div class="case-accordions" data-case-list>
-          <article class="case is-open"><button class="case-toggle" type="button" aria-expanded="true"><span class="case-index">01</span><span class="case-title" data-i18n="case1Title">ช่วยจัดประเภทใบแจ้งหนี้</span><span class="case-plus"><svg class="icon"><use href="#minus"></use></svg></span></button><div class="case-panel"><p class="case-sector" data-i18n="case1Sector">สำนักงานบัญชี</p><p data-i18n="case1Body">Workflow อ่านข้อมูลจากใบแจ้งหนี้และเสนอรายการเดบิตเครดิตให้นักบัญชีตรวจสอบ ลดรอบงานจากประมาณ 7 วันเหลือ 1 วัน โดยนักบัญชียังเป็นผู้อนุมัติขั้นสุดท้าย</p><strong>7 <svg class="icon"><use href="#arrow"></use></svg> 1 <small data-i18n="case1Result">วันต่อรอบงาน</small></strong></div></article>
-          <article class="case"><button class="case-toggle" type="button" aria-expanded="false"><span class="case-index">02</span><span class="case-title" data-i18n="case2Title">ส่งอีเมลใบแจ้งหนี้ประจำเดือน</span><span class="case-plus"><svg class="icon"><use href="#plus"></use></svg></span></button><div class="case-panel"><p class="case-sector" data-i18n="case2Sector">สำนักงานบัญชี</p><p data-i18n="case2Body">ระบบเตรียมและส่งอีเมลใบแจ้งหนี้ตามรอบให้ลูกค้าทั้งหมด ช่วยให้การสื่อสารสม่ำเสมอ และลดความเสี่ยงจากการตกหล่น</p><strong>3h <svg class="icon"><use href="#arrow"></use></svg> &lt;5m <small data-i18n="case2Result">เวลาทำงานต่อเดือน</small></strong></div></article>
-          <article class="case"><button class="case-toggle" type="button" aria-expanded="false"><span class="case-index">03</span><span class="case-title" data-i18n="case3Title">จัดแผนงานซ่อมบำรุงขนาดใหญ่</span><span class="case-plus"><svg class="icon"><use href="#plus"></use></svg></span></button><div class="case-panel"><p class="case-sector" data-i18n="case3Sector">ธุรกิจพลังงานไทย</p><p data-i18n="case3Body">ระบบวิเคราะห์งานซ่อม ลำดับก่อนหลัง ด้วยข้อจำกัดหน้างาน เช่น จำนวนคน, เวลาที่จำกัด เป็นต้น เพื่อสร้างแผนดำเนินงานที่นำไปใช้ต่อได้</p><strong class="case-result-financial"><span class="case-result-value" data-i18n-html="case3ResultValue">THB 1M+</span><small data-i18n="case3Result">ต้นทุนที่ลดลง</small></strong></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter assessment" id="assessment" aria-labelledby="assessment-title">
-      <div class="page-width">
-        <div class="assessment-top"><div><p class="kicker" data-i18n="assessmentKicker">AI Workflow &amp; Time-Saving Assessment</p><h2 id="assessment-title" data-i18n-html="assessmentTitle">เริ่มจากเข้าใจงาน<br>โดยไม่ต้องซื้อระบบ</h2></div><div class="assessment-price"><span data-i18n="priceLabel">ค่าประเมิน</span><strong data-i18n="price">ฟรี</strong><small data-i18n="priceNote">ไม่มีข้อผูกมัดให้ซื้อบริการต่อ</small></div></div>
-        <div class="assessment-copy" data-scrub-copy><p data-i18n="assessmentIntro">คุยกัน 45 นาทีเพื่อเข้าใจงานที่ทำซ้ำ เสียเวลา ตกหล่น และสิ่งที่ทีมยังต้อง manual จากนั้นภายใน 5 วันทำการ คุณจะได้รับรายงานพร้อมคำแนะนำที่คำนึงถึงทีม งบประมาณ และเครื่องมือที่ใช้อยู่จริง</p></div>
-        <div class="assessment-columns"><div><h3 data-i18n="deliverablesTitle">สิ่งที่คุณจะได้รับ</h3><ul class="check-list"><li data-i18n="deliverable1">สรุปงานและขั้นตอนที่กำลังทำให้ทีมช้าลง</li><li data-i18n="deliverable2">คำแนะนำที่นำไปใช้ได้จริง 3 ถึง 7 ข้อ</li><li data-i18n="deliverable3">ประมาณการค่าใช้จ่ายของ AI หรือ เครื่องมือ ที่เหมาะสมของแต่ละทางเลือก</li><li data-i18n="deliverable4">ประมาณการเวลาที่อาจประหยัดได้จากข้อมูลที่คุณให้</li><li data-i18n="deliverable5">แผนแยก Quick win ออกจากงานปรับปรุงระยะถัดไป</li><li data-i18n="deliverable6">ประชุมอธิบายวิธีการแก้ปัญหา 30 นาที</li></ul></div><aside class="assessment-aside"><p class="kicker" data-i18n="recommendKicker">คำตอบไม่จำเป็นต้องเป็น AI เสมอไป</p><p data-i18n="recommendLead">คำตอบอาจเป็น Automation การตัดขั้นตอนที่ไม่จำเป็น หรือการใช้ Software ที่มีอยู่ให้ดีขึ้น เทคโนโลยีเป็นเครื่องมือ ไม่ใช่เป้าหมาย</p></aside></div>
-        <article class="implementation"><div><p class="kicker kicker-light" data-i18n="implementationKicker">ถ้าพบจุดที่ควรแก้</p><h3 data-i18n-html="implementationTitle">เราช่วยสร้างไปกับ<br>ทีมคุณได้</h3></div><div><p data-i18n="implementationBody">ก่อนเริ่มงาน เราจะตกลงปัญหา ผลลัพธ์ที่ต้องการ ขอบเขต เครื่องมือ ข้อมูลที่ใช้ วิธีทดสอบ ค่าบริการ และค่า Software หรือ AI ให้ชัดเจน</p><ul><li data-i18n="implementation1">ทดสอบกับสถานการณ์จริง</li><li data-i18n="implementation2">คู่มือและการอบรมทีม</li><li data-i18n="implementation3">ส่งมอบและทบทวนหลังเปิดใช้</li></ul></div><p class="implementation-rationale" data-i18n="assessmentRationale">การประเมินช่วยให้ทั้งสองฝ่ายยืนยันได้ก่อนเริ่มงานที่มีค่าใช้จ่าย ว่ามีจุดปรับปรุงที่คุ้มค่าหรือไม่ หากต้องการให้เราช่วยลงมือทำต่อ Code Crafted สามารถเสนอราคาแยกต่างหากได้ คุณเก็บรายงานไว้ได้ไม่ว่าจะทำต่อกับเราหรือไม่ เนื่องจากทุกการประเมินมีทั้งรายงานเป็นลายลักษณ์อักษรและการประชุมอธิบายผล เราจึงรับจำนวนการประเมินฟรีต่อเดือนแบบจำกัด</p></article>
-      </div>
-    </section>
-
-    <section class="chapter process" id="process" aria-labelledby="process-title"><div class="page-width"><div class="chapter-head"><p class="kicker" data-i18n="processKicker">วิธีการทำงาน</p><h2 id="process-title" data-i18n-html="processTitle">เข้าใจงานก่อน<br>แล้วค่อยเลือกสิ่งที่ควรทำ</h2></div><ol class="steps"><li><span>01</span><div><h3 data-i18n="step1Title">พาเราดูวิธีทำงานปัจจุบัน</h3><p data-i18n="step1Body">คุยกัน 45 นาที เพื่อดูว่างานเริ่มตรงไหน ช้าตรงไหน และเคยลองแก้อะไรแล้ว</p></div></li><li><span>02</span><div><h3 data-i18n="step2Title">รับรายงานเป็นลายลักษณ์อักษร</h3><p data-i18n="step2Body">ภายใน 5 วันทำการ รับคำแนะนำพร้อมต้นทุน ความยาก ลำดับความสำคัญ และเวลาที่อาจประหยัดได้</p></div></li><li><span>03</span><div><h3 data-i18n="step3Title">ทบทวนผลร่วมกัน</h3><p data-i18n="step3Body">ประชุมอธิบายผล 30 นาที ถามได้เต็มที่ และเลือกจุดเริ่มต้นที่เหมาะกับธุรกิจ</p></div></li><li><span>04</span><div><h3 data-i18n="step4Title">เลือกว่าจะทำอะไรต่อ</h3><p data-i18n="step4Body">ทำเอง ใช้ผู้ให้บริการรายอื่น ขอใบเสนอราคาจากเรา หรือยังไม่ทำอะไรเลยก็ได้</p></div></li></ol></div></section>
-
-    <section class="chapter faq" id="faq" aria-labelledby="faq-title"><div class="page-width faq-layout"><div><p class="kicker" data-i18n="faqKicker">คำถามที่พบบ่อย</p><h2 id="faq-title" data-i18n-html="faqTitle">รู้รายละเอียดก่อน<br>ค่อยตัดสินใจ</h2><p data-i18n="faqLead">ถ้ายังไม่แน่ใจว่างานของคุณเหมาะหรือไม่ เล่าให้เราฟังก่อนได้ เราจะบอกตรง ๆ ว่าการประเมินน่าจะช่วยได้หรือไม่</p></div><div class="faq-list"><details><summary data-i18n="faq1Q">การประเมินฟรีจริงหรือไม่</summary><p data-i18n="faq1A">ฟรี ไม่มีค่าประเมิน และไม่มีข้อผูกมัดให้ซื้อบริการอื่นต่อ</p></details><details><summary data-i18n="faq2Q">ต้องเข้าใจ AI ก่อนหรือไม่</summary><p data-i18n="faq2A">ไม่ต้อง เราคุยเรื่องธุรกิจด้วยภาษาที่เข้าใจง่าย และอธิบายว่าทางเลือกแต่ละแบบทำอะไร มีค่าใช้จ่ายอะไร และทีมต้องปรับอะไรบ้าง</p></details><details><summary data-i18n="faq3Q">ต้องเตรียมอะไรบ้าง</summary><p data-i18n="faq3A">เตรียมเล่าว่าวันทำงานปกติเป็นอย่างไร งานไหนทำซ้ำ งานไหนล่าช้า และทีมใช้เครื่องมืออะไร ไม่ต้องทำ Presentation หรือ Technical brief</p></details><details><summary data-i18n="faq4Q">ต้องส่งข้อมูลสำคัญหรือไม่</summary><p data-i18n="faq4A">การประเมินฟรีไม่ต้องใช้รหัสผ่านหรือเอกสารลูกค้าเป็นค่าเริ่มต้น เราเริ่มจากคำอธิบาย Workflow และตัวอย่างที่ไม่อ่อนไหวได้</p></details><details><summary data-i18n="faq5Q">คำแนะนำจะเป็น AI อย่างเดียวหรือไม่</summary><p data-i18n="faq5A">ไม่เสมอไป เราอาจแนะนำ AI, Automation, Software ที่ง่ายกว่า หรือการปรับขั้นตอนการทำงาน</p></details></div></div></section>
-
-    <section class="chapter about" id="about" aria-labelledby="about-title">
-      <div class="page-width">
-        <header class="about-heading">
-          <p class="kicker kicker-light">Code Crafted</p>
-          <h2 id="about-title"><span data-i18n="aboutTitleLead">เข้าใจงานจริง</span><br><span data-i18n="aboutTitleEnd">ก่อนเลือกเทคโนโลยี</span></h2>
-        </header>
-        <div class="about-grid">
-          <article class="about-story" data-about-story>
-            <h3 data-i18n="aboutName">เกี่ยวกับ Code Crafted</h3>
-            <div class="about-copy">
-              <p data-i18n="aboutBody1">Code Crafted มีประสบการณ์มากกว่า 7 ปีในการนำ AI, Automation, Data Analysis และ Optimization มาแก้ปัญหาการทำงานจริงในธุรกิจบัญชี พลังงาน ค้าปลีก และบริการทางการเงิน</p>
-              <p data-i18n="aboutBody2">เราเริ่มจากทำความเข้าใจว่างานเกิดขึ้นจริงอย่างไร จากนั้นจึงลดขั้นตอนที่ไม่จำเป็นและเสนอการปรับปรุงที่เล็กที่สุดแต่ใช้งานได้จริง โดยเน้นคำแนะนำที่นำไปใช้ได้ การควบคุมที่เหมาะสม และเทคโนโลยีที่ช่วยทีมแทนที่จะเพิ่มความซับซ้อน</p>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="service-line" lang="en">AI | Automation | Optimization</p>
+            <h1 id="hero-title" data-i18n-html="heroTitle">ลดงานซ้ำซาก<br>ให้ธุรกิจเดินหน้าได้มากขึ้น</h1>
+            <p data-i18n="heroLead" class="hero-lead">คืนเวลาให้ทีม เริ่มจากการประเมิน AI Workflow &amp; Time-Saving ฟรี เพื่อปรับวิธีการทำงานได้ง่ายขึ้น ด้วยเครื่องมือที่คุณมีอยู่แล้ว</p>
+            <div class="hero-actions"><a class="button" href="#contact"><span data-i18n="requestAssessment">ขอรับการประเมินฟรี</span><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a><a class="text-link" href="#proof"><span data-i18n="heroProof">ดูผลงานจริง</span><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a></div>
+            <p data-i18n="heroNote" class="hero-note">ได้ทั้งไทยและอังกฤษ ไม่ต้องเตรียม Technical brief หรือเข้าใจ AI</p>
+          </div>
+          <div class="hero-art">
+            <div class="globe-stage" aria-hidden="true">
+              <img class="network-globe" src="assets/brand/workflow-network.svg" width="470" height="470" alt="">
+              <div class="tool-orbit tool-orbit-one">
+                <span class="art-label art-label-line"><svg class="icon"><use href="#tool-line"></use></svg>LINE</span>
+                <span class="art-label art-label-email"><svg class="icon"><use href="#tool-email"></use></svg>Email</span>
+                <span class="art-label art-label-excel"><svg class="icon"><use href="#tool-excel"></use></svg>Excel</span>
+              </div>
+              <div class="tool-orbit tool-orbit-two">
+                <span class="art-label art-label-word"><svg class="icon"><use href="#tool-word"></use></svg>Word</span>
+                <span class="art-label art-label-pdf"><svg class="icon"><use href="#tool-pdf"></use></svg>PDF</span>
+              </div>
+              <div class="tool-orbit tool-orbit-three">
+                <span class="art-label art-label-calendar"><svg class="icon"><use href="#calendar"></use></svg>Calendar</span>
+                <span class="art-label art-label-invoice"><svg class="icon"><use href="#tool-invoice"></use></svg>Invoice</span>
+              </div>
             </div>
-          </article>
-          <address class="about-contact">
-            <h3 data-i18n="aboutContactTitle">ติดต่อ Code Crafted</h3>
-            <dl>
-              <div><dt><svg class="contact-icon" aria-hidden="true" focusable="false"><use href="#map-pin"></use></svg><span data-i18n="locationLabel">ที่ตั้ง</span></dt><dd data-i18n="locationAddress">88/31 ซอยประชาอุทิศ 131 แขวงทุ่งครุ เขตทุ่งครุ กรุงเทพมหานคร 10140</dd></div>
-              <div><dt><svg class="contact-icon" aria-hidden="true" focusable="false"><use href="#mail"></use></svg><span data-i18n="emailLabel">อีเมล</span></dt><dd><a href="mailto:info@code-crafted.com">info@code-crafted.com</a></dd></div>
-              <div><dt><svg class="contact-icon" aria-hidden="true" focusable="false"><use href="#phone"></use></svg><span data-i18n="phoneLabel">โทรศัพท์</span></dt><dd><a href="tel:+66671759695">067-175-9695</a></dd></div>
-              <div><dt><svg class="contact-icon" aria-hidden="true" focusable="false"><use href="#message-circle"></use></svg><span>LINE ID</span></dt><dd><a href="https://line.me/R/ti/p/@codecrafted" target="_blank" rel="noopener noreferrer">@codecrafted</a></dd></div>
-            </dl>
-          </address>
+            <p data-i18n="artCaption" class="art-caption">เชื่อมงานให้ต่อเนื่อง คืนเวลาให้ทีม</p>
+          </div>
+        </div>
+        <div class="hero-facts">
+          <p data-i18n="factsIntro" class="facts-intro">เริ่มอย่างชัดเจน โดยไม่มีข้อผูกมัด</p>
+          <div class="fact"><strong data-i18n="fact1Value">45 นาที</strong><span data-i18n="fact1Label">พูดคุยเพื่อเข้าใจงาน</span></div>
+          <div class="fact"><strong data-i18n="fact2Value">5 วันทำการ</strong><span data-i18n="fact2Label">รับรายงานพร้อมคำแนะนำ</span></div>
+          <div class="fact"><strong data-i18n="fact3Value">30 นาที</strong><span data-i18n="fact3Label">ทบทวนผลและตอบคำถาม</span></div>
         </div>
       </div>
     </section>
+    <section class="section problems" id="problems" aria-labelledby="problems-title"><div class="container">
+      <div class="section-heading"><div><span class="section-label" data-i18n="problemsKicker">วันทำงานของคุณมีลักษณะแบบนี้หรือเปล่า</span><h2 id="problems-title" data-i18n-html="problemsTitle">ทีมที่ดี ควรมี<br>วิธีทำงานที่คล่องตัวขึ้น</h2></div><p data-i18n="problemsLead">เมื่องานเล็ก ๆ รวมกันจนกลายเป็นภาระ การเพิ่มเครื่องมืออาจไม่ใช่คำตอบเสมอไป ลองเริ่มจากหาว่างานติดขัดตรงไหน</p></div>
+      <div class="problem-grid"><article class="problem"><svg class="icon" aria-hidden="true"><use href="#files"></use></svg><div><h3 data-i18n="problem1Title">ข้อมูลกระจายหลายที่</h3><p data-i18n="problem1Body">ข้อมูลลูกค้าและงานกระจายอยู่ใน LINE อีเมล ไฟล์ และ Spreadsheet จนทีมเสียเวลาค้นหาและลูกค้าต้องรอคำตอบ</p></div></article>
+<article class="problem"><svg class="icon" aria-hidden="true"><use href="#repeat"></use></svg><div><h3 data-i18n="problem2Title">ทำเรื่องเดิมซ้ำทุกวัน</h3><p data-i18n="problem2Body">คัดลอกข้อมูล เขียนคำตอบ ใบเสนอราคา และรายงานเดิมซ้ำ ๆ จนเหลือเวลาดูแลลูกค้าน้อยลง</p></div></article>
+<article class="problem"><svg class="icon" aria-hidden="true"><use href="#calendar"></use></svg><div><h3 data-i18n="problem3Title">นัดหมายและงานติดตามตกหล่น</h3><p data-i18n="problem3Body">คุยนัดหมายใน LINE แต่ต้องนำไปใส่ Calendar เอง ทำให้มีโอกาสลืมและพลาดนัด</p></div></article>
+<article class="problem"><svg class="icon" aria-hidden="true"><use href="#document"></use></svg><div><h3 data-i18n="problem4Title">เอกสารใช้เวลาตรวจนาน</h3><p data-i18n="problem4Body">ตรวจสอบใบแจ้งหนี้ สลิป และใบเสร็จด้วยมือ ใช้เวลามากและเสี่ยงผิดพลาด</p></div></article>
+<article class="problem"><svg class="icon" aria-hidden="true"><use href="#search"></use></svg><div><h3 data-i18n="problem5Title">ความรู้สำคัญซ่อนอยู่ในเอกสาร</h3><p data-i18n="problem5Body">คำตอบอยู่ใน PDF ยาว ๆ และไฟล์หลายที่ ทีมจึงต้องค้น อ่าน และสรุปใหม่ทุกครั้ง</p></div></article>
+<article class="problem"><svg class="icon" aria-hidden="true"><use href="#people"></use></svg><div><h3 data-i18n="problem6Title">ทุกอย่างขึ้นอยู่กับคนเดียว</h3><p data-i18n="problem6Body">ขั้นตอนสำคัญขึ้นอยู่กับคนๆ เดียว ถ้าขาดคนนี้ไป ธุรกิจจะไปต่อย่างไร</p></div></article>
+</div>
+      <div class="approach-note"><strong data-i18n="approachTitle">เริ่มจากงานที่ทีมทำอยู่จริง</strong><span data-i18n="approachBody">มองหาโอกาสที่อาจช่วยประหยัดเวลาได้อย่างน้อย 5 ชั่วโมงต่อสัปดาห์ โดยไม่เพิ่มความซับซ้อน</span></div>
+    </div></section>
+    <section class="section proof" id="proof" aria-labelledby="proof-title"><div class="container">
+      <div class="section-heading"><div><span data-i18n="proofKicker" class="section-label">ผลงานจากการแก้งานจริง</span><h2 id="proof-title" data-i18n-html="proofTitle">เริ่มจากปัญหาจริง<br>สู่ผลลัพธ์ที่ใช้ได้จริง</h2></div><p data-i18n="proofIntro">ตั้งแต่งานบัญชีไปจนถึงแผนซ่อมบำรุง ทุกงานเริ่มจากการเข้าใจปัญหาเฉพาะของธุรกิจ</p></div>
+      <div class="case-list">
+        <article class="case">
+          <header class="case-heading"><p data-i18n="case1Sector" class="case-sector">สำนักงานบัญชี</p><h3 data-i18n="case1Title" class="case-title">จัดประเภทใบแจ้งหนี้</h3></header>
+          <div class="case-outcome"><span data-i18n="case1Metric" class="case-result">7 วัน → 1 วัน</span><span data-i18n="case1Result" class="case-unit">ระยะเวลาจัดการใบแจ้งหนี้ต่อรอบ</span></div>
+          <p data-i18n="case1Body" class="case-body">Workflow อ่านข้อมูลจากใบแจ้งหนี้และเสนอรายการเดบิตเครดิตให้นักบัญชีตรวจสอบ ช่วยลดเวลาจัดประเภทเอกสาร โดยนักบัญชียังเป็นผู้อนุมัติขั้นสุดท้าย</p>
+        </article>
+        <article class="case">
+          <header class="case-heading"><p data-i18n="case2Sector" class="case-sector">สำนักงานบัญชี</p><h3 data-i18n="case2Title" class="case-title">ส่งอีเมลใบแจ้งหนี้รายเดือน</h3></header>
+          <div class="case-outcome"><span data-i18n="case2Metric" class="case-result">3 ชั่วโมง → น้อยกว่า 5 นาที</span><span data-i18n="case2Result" class="case-unit">เวลาที่ใช้ส่งใบแจ้งหนี้ในแต่ละเดือน</span></div>
+          <p data-i18n="case2Body" class="case-body">ระบบเตรียมและส่งอีเมลใบแจ้งหนี้ตามรอบให้ลูกค้าทั้งหมด ช่วยให้การสื่อสารสม่ำเสมอ และลดความเสี่ยงจากการตกหล่น</p>
+        </article>
+        <article class="case">
+          <header class="case-heading"><p data-i18n="case3Sector" class="case-sector">ธุรกิจพลังงานไทย</p><h3 data-i18n="case3Title" class="case-title">วางแผนงานซ่อมบำรุง</h3></header>
+          <div class="case-outcome"><span data-i18n="case3Metric" class="case-result">มากกว่า 1 ล้านบาท</span><span data-i18n="case3Result" class="case-unit">ต้นทุนงานซ่อมบำรุงที่ประหยัดได้</span></div>
+          <p data-i18n="case3Body" class="case-body">ระบบวิเคราะห์งานซ่อม ลำดับก่อนหลัง ด้วยข้อจำกัดหน้างาน เช่น จำนวนคน, เวลาที่จำกัด เป็นต้น เพื่อสร้างแผนดำเนินงานที่นำไปใช้ต่อได้</p>
+        </article>
+      </div>
+    </div></section>
+    <section class="section assessment" id="assessment" aria-labelledby="assessment-title"><div class="container">
+      <div class="assessment-grid"><div class="assessment-copy">
+        <span data-i18n="assessmentKicker" class="section-label">AI Workflow &amp; Time-Saving Assessment</span><h2 id="assessment-title" data-i18n-html="assessmentTitle">เห็นทางเลือกที่ชัดขึ้น<br>ก่อนลงทุนกับระบบ</h2>
+        <p data-i18n="assessmentIntro">เล่าให้เราฟังว่าทีมทำงานอย่างไร เราจะช่วยหางานซ้ำ จุดที่ล่าช้า และงานที่ตกหล่น พร้อมแนะนำวิธีปรับปรุงที่เหมาะกับทีม งบประมาณ และเครื่องมือที่ใช้อยู่จริง</p>
+        <a class="button" href="#contact"><span data-i18n="requestAssessment">ขอรับการประเมินฟรี</span><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a><p data-i18n="assessmentPromise" class="assessment-note">ประเมินฟรี ไม่มีข้อผูกมัดให้ซื้อระบบหรือบริการต่อ</p>
+      </div><aside class="report" aria-labelledby="deliverables-title">
+        <div class="report-head"><div><h3 id="deliverables-title" data-i18n="deliverablesTitle">สิ่งที่คุณจะได้รับ</h3><p data-i18n="reportSubtitle">รายงานเป็นลายลักษณ์อักษร เก็บไว้ใช้ต่อได้</p></div><span data-i18n="price" class="free-label">ฟรี</span></div>
+        <ul class="check-list"><li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg><span data-i18n="deliverable1">สรุปงานและขั้นตอนที่กำลังทำให้ทีมช้าลง</span></li><li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg><span data-i18n="deliverable2">คำแนะนำที่นำไปใช้ได้จริง 3 ถึง 7 ข้อ</span></li><li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg><span data-i18n="deliverable3">ประมาณการค่าใช้จ่ายของ AI หรือ เครื่องมือ ที่เหมาะสมของแต่ละทางเลือก</span></li><li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg><span data-i18n="deliverable4">ประมาณการเวลาที่อาจประหยัดได้จากข้อมูลที่คุณให้</span></li><li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg><span data-i18n="deliverable5">แผนแยก Quick win ออกจากงานปรับปรุงระยะถัดไป</span></li><li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg><span data-i18n="deliverable6">ประชุมอธิบายวิธีการแก้ปัญหา 30 นาที</span></li></ul>
+      </aside></div>
+    </div></section>
+    <section class="section process" id="process" aria-labelledby="process-title"><div class="container">
+      <div class="process-heading"><div><span data-i18n="processKicker" class="section-label">วิธีการทำงาน</span><h2 id="process-title" data-i18n-html="processTitle">จากบทสนทนา<br>สู่แผนที่ลงมือทำได้</h2></div><p data-i18n="processLead">ขั้นตอนชัดเจน มีเวลาให้ถาม และเลือกสิ่งที่เหมาะกับธุรกิจของคุณ</p></div>
+      <ol class="steps"><li><h3 data-i18n="step1Title">เล่าว่าทีมทำงานอย่างไร</h3><p data-i18n="step1Body">คุยกัน 45 นาที เพื่อเข้าใจขั้นตอน เครื่องมือที่ใช้ และจุดที่งานเริ่มติดขัด</p></li><li><h3 data-i18n="step2Title">รับแผนเป็นลายลักษณ์อักษร</h3><p data-i18n="step2Body">ภายใน 5 วันทำการ รับคำแนะนำพร้อมค่าใช้จ่าย ความยาก และเวลาที่อาจประหยัดได้</p></li><li><h3 data-i18n="step3Title">ทบทวนผลร่วมกัน</h3><p data-i18n="step3Body">คุยกัน 30 นาที เพื่ออธิบายผล ตอบคำถาม และหาจุดเริ่มต้นที่เหมาะกับธุรกิจ</p></li><li><h3 data-i18n="step4Title">เลือกทางเดินต่อ</h3><p data-i18n="step4Body">ทำเอง ใช้ผู้ให้บริการอื่น ขอใบเสนอราคาจากเรา หรือยังไม่ทำอะไรเลยก็ได้</p></li></ol>
+      <div class="implementation-note"><h3 data-i18n="implementationTitle">อยากให้ช่วยลงมือทำต่อ?</h3><p data-i18n="implementationBody">เราสามารถเสนอราคางานพัฒนาแยกต่างหาก โดยตกลงขอบเขต ผลลัพธ์ วิธีทดสอบ ค่าบริการ และค่า Software ให้ชัดเจนก่อนเริ่ม พร้อมทดสอบกับงานจริง อบรมทีม ส่งมอบ และทบทวนหลังเปิดใช้</p></div>
+    </div></section>
+    <section class="section faq" id="faq" aria-labelledby="faq-title"><div class="container faq-grid">
+      <div class="faq-intro"><span data-i18n="faqKicker" class="section-label">คำถามที่พบบ่อย</span><h2 id="faq-title" data-i18n-html="faqTitle">รู้รายละเอียด<br>ก่อนตัดสินใจ</h2><p data-i18n="faqLead">ยังไม่แน่ใจว่าเหมาะกับธุรกิจหรือไม่ เล่าให้เราฟังได้ว่างานไหนกำลังใช้เวลาของทีม</p></div>
+      <div class="faq-list"><details><summary><span data-i18n="faq1Q">การประเมินฟรีจริงหรือไม่</span><span class="disclosure-icon" aria-hidden="true"></span></summary><p data-i18n="faq1A">ฟรี ไม่มีค่าประเมิน และไม่มีข้อผูกมัดให้ซื้อบริการอื่นต่อ</p></details><details><summary><span data-i18n="faq2Q">ต้องเข้าใจ AI ก่อนหรือไม่</span><span class="disclosure-icon" aria-hidden="true"></span></summary><p data-i18n="faq2A">ไม่ต้อง เราคุยเรื่องธุรกิจด้วยภาษาที่เข้าใจง่าย และอธิบายว่าทางเลือกแต่ละแบบทำอะไร มีค่าใช้จ่ายอะไร และทีมต้องปรับอะไรบ้าง</p></details><details><summary><span data-i18n="faq3Q">ต้องเตรียมอะไรบ้าง</span><span class="disclosure-icon" aria-hidden="true"></span></summary><p data-i18n="faq3A">เตรียมเล่าว่าวันทำงานปกติเป็นอย่างไร งานไหนทำซ้ำ งานไหนล่าช้า และทีมใช้เครื่องมืออะไร ไม่ต้องทำ Presentation หรือ Technical brief</p></details><details><summary><span data-i18n="faq4Q">ต้องส่งข้อมูลสำคัญหรือไม่</span><span class="disclosure-icon" aria-hidden="true"></span></summary><p data-i18n="faq4A">การประเมินฟรีไม่ต้องใช้รหัสผ่านหรือเอกสารลูกค้าเป็นค่าเริ่มต้น เราเริ่มจากคำอธิบาย Workflow และตัวอย่างที่ไม่อ่อนไหวได้</p></details><details><summary><span data-i18n="faq5Q">คำแนะนำจะเป็น AI อย่างเดียวหรือไม่</span><span class="disclosure-icon" aria-hidden="true"></span></summary><p data-i18n="faq5A">ไม่เสมอไป เราอาจแนะนำ AI, Automation, Software ที่ง่ายกว่า หรือการปรับขั้นตอนการทำงาน</p></details></div>
+    </div></section>
+    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="container contact-grid">
+      <div class="contact-intro"><span data-i18n="contactLabel" class="section-label">เริ่มจากบทสนทนา</span><h2 id="contact-title" data-i18n-html="contactTitle">อยากให้ทีมใช้เวลา<br>กับงานไหนน้อยลง?</h2><p data-i18n="contactLead">เริ่มจากเล่างานหนึ่งอย่างที่ต้องทำซ้ำ เราจะช่วยดูว่าการประเมิน Workflow ฟรี น่าจะเป็นจุดเริ่มต้นที่เหมาะกับคุณหรือไม่</p>
+        <div class="contact-actions"><a class="button button-light" href="https://line.me/R/ti/p/@codecrafted" target="_blank" rel="noopener noreferrer"><span data-i18n="contactLine">พูดคุยผ่าน LINE</span><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a><a class="text-link" href="mailto:info@code-crafted.com"><span data-i18n="contactEmail">ส่งอีเมลถึงเรา</span><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a></div>
+        <p data-i18n="contactReassurance" class="contact-reassurance">ไม่ต้องเตรียม Presentation แค่เล่าว่างานเกิดขึ้นอย่างไร</p>
+      </div>
+      <div class="contact-details" id="about"><h3>Code Crafted</h3><p data-i18n="aboutBody1">ประสบการณ์กว่า 7 ปีในการใช้ AI, Automation, Data Analysis และ Optimization แก้ปัญหาการทำงานจริงในธุรกิจบัญชี พลังงาน ค้าปลีก และบริการทางการเงิน</p>
+        <address><dl><div><dt data-i18n="emailLabel">อีเมล</dt><dd><a href="mailto:info@code-crafted.com">info@code-crafted.com</a></dd></div><div><dt data-i18n="phoneLabel">โทรศัพท์</dt><dd><a href="tel:+66671759695">093-625-5997</a></dd></div><div><dt>LINE ID</dt><dd><a href="https://line.me/R/ti/p/@codecrafted" target="_blank" rel="noopener noreferrer">@codecrafted</a></dd></div><div class="contact-address"><dt data-i18n="locationLabel">ที่ตั้ง</dt><dd data-i18n="locationAddress">88/31 ซอยประชาอุทิศ 131 แขวงทุ่งครุ เขตทุ่งครุ กรุงเทพมหานคร 10140</dd></div></dl></address>
+      </div>
+    </div></section>
   </main>
-  <footer><div class="page-width footer-grid"><img src="assets/brand/code-crafted-lockup.svg" alt="Code Crafted"><p data-i18n="footerStatement">เข้าใจงานก่อน เลือกเทคโนโลยีเท่าที่จำเป็น แล้วสร้างสิ่งที่ทีมใช้ได้จริง</p><div><a href="#problems" data-i18n="navProblems">ปัญหาที่ช่วยแก้</a><a href="#assessment" data-i18n="navAssessment">บริการประเมิน</a><a href="#about" data-i18n="navAbout">เราเป็นใคร</a></div><aside class="footer-trust" aria-labelledby="footer-trust-title"><figure class="footer-trust-mark"><img src="assets/brand/dbd-logo.png" width="312" height="150" loading="lazy" alt="DBD logo, Department of Business Development, Ministry of Commerce"></figure><section class="footer-trust-department"><strong data-i18n="dbdName">กรมพัฒนาธุรกิจการค้า</strong><span data-i18n="dbdMinistry">กระทรวงพาณิชย์</span></section><section class="footer-trust-content"><p class="footer-trust-kicker" data-i18n="footerTrustKicker">ข้อมูลนิติบุคคล</p><h2 id="footer-trust-title" data-i18n="footerTrustTitle">Code Crafted</h2><p class="footer-registration"><span data-i18n="footerRegistrationLabel">ทะเบียนนิติบุคคลเลขที่</span><strong data-i18n="footerRegistrationNumber">[ระบุเลขทะเบียนนิติบุคคล]</strong></p></section></aside><small>© 2026 Code Crafted · Bangkok, Thailand</small></div></footer>
-  <script src="assets/vendor/gsap.min.js"></script><script src="assets/vendor/ScrollTrigger.min.js"></script><script src="js/script.js"></script>
+  <footer><div class="container footer-inner"><a class="brand" href="#top" aria-label="Code Crafted"><img src="assets/brand/favicon.svg" width="29" height="32" alt=""><span class="brand-name">Code Crafted</span></a><p><span data-i18n="footerStatement">เทคโนโลยีที่คิดอย่างรอบด้าน เพื่อให้ได้งานที่มีประสิทธิภาพ</span><br>© 2026 Code Crafted. Bangkok, Thailand.</p></div></footer>
 </body>
 </html>

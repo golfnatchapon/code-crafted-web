@@ -1,19 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="326"
-     height="354"
-     viewBox="0 0 326 354"
-     fill="none"
-     role="img"
-     aria-labelledby="symbol-title symbol-desc">
-  <title id="symbol-title">Interlocking CC symbol</title>
-  <desc id="symbol-desc">A clean, deep-green interlocking double-C monogram.</desc>
-  <path d="M194 49 A102.5 102.5 0 1 0 194 194"
-        stroke="#004643"
-        stroke-width="37"
-        stroke-linecap="butt"/>
-  <path d="M122.1 172.8 A102.5 102.5 0 1 1 122.1 293.2"
-        stroke="#004643"
-        stroke-width="37"
-        stroke-linecap="butt"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 326 354" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <path d="M194,49C174.787,29.798 148.707,19 121.543,19C65.313,19 19.043,65.27 19.043,121.5C19.043,177.73 65.313,224 121.543,224C148.707,224 174.787,213.202 194,194" style="fill:none;fill-rule:nonzero;stroke:rgb(0,70,67);stroke-width:37px;"/>
+    <path d="M122.1,172.8C141.367,146.249 172.254,130.5 205.059,130.5C261.289,130.5 307.559,176.77 307.559,233C307.559,289.23 261.289,335.5 205.059,335.5C172.254,335.5 141.367,319.751 122.1,293.2" style="fill:none;fill-rule:nonzero;stroke:rgb(227,167,47);stroke-width:37px;"/>
 </svg>

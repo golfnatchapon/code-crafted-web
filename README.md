@@ -13,7 +13,7 @@ Open `http://localhost:8000`.
 ## Structure
 
 - `site/` — deployable static site
-- `site/assets/` — brand files, fonts, paper images, and third-party browser libraries
+- `site/assets/` — brand files, the workflow illustration, and locally hosted fonts
 - `site/css/` — styles
 - `site/js/` — client-side behavior
 - `.github/workflows/deploy-pages.yml` — GitHub Pages deployment
